@@ -1,38 +1,40 @@
 package com.hmasand.thepensieve.models;
 
-import android.util.Log;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-import com.parse.FindCallback;
-import com.parse.GetCallback;
-import com.parse.ParseClassName;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
-
-import com.parse.ParseException;
-import java.util.ArrayList;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by hmasand on 1/7/16.
  */
-@ParseClassName("Entry")
-public class Entry extends ParseObject{
+
+public class Entry {
+
+    private DatabaseReference mDatabase;
+
+    private String body;
 
     public Entry() {
         super();
     }
 
     public Entry(String body) {
-        super();
         setBody(body);
+
+        String date = new SimpleDateFormat("yyyy-MM-dd", Locale.US).format(new Date());
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabase.child("entries").child(date).setValue("hello");
     }
 
     public String getBody() {
-        return getString("body");
+        return body;
     }
 
     public void setBody(String body) {
-        put("body", body);
+        this.body = body;
     }
 
 //    public static ArrayList<Entry> getAllEntries() {

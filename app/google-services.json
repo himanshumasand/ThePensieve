@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "673922464399",
+    "firebase_url": "https://thepensieve-d1ea9.firebaseio.com",
+    "project_id": "thepensieve-d1ea9",
+    "storage_bucket": "thepensieve-d1ea9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673922464399:android:c164e01673b95e50",
+        "android_client_info": {
+          "package_name": "com.hmasand.thepensieve"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "673922464399-gjv50u7mpeakd55nu828r3tn3hpmpquh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbOU94qG7MDMCTKlXcchYJpFJyBLvqSXM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

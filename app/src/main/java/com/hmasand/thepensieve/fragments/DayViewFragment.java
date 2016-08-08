@@ -3,7 +3,6 @@ package com.hmasand.thepensieve.fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,13 +11,8 @@ import android.widget.ListView;
 import com.hmasand.thepensieve.R;
 import com.hmasand.thepensieve.adapters.EntriesArrayAdapter;
 import com.hmasand.thepensieve.models.Entry;
-import com.parse.FindCallback;
-import com.parse.ParseException;
-import com.parse.ParseQuery;
 
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
 
 /**
  * Created by hmasand on 1/7/16.
@@ -52,19 +46,19 @@ public class DayViewFragment extends Fragment {
     }
 
     private void populateEntries() {
-        ParseQuery<Entry> query = ParseQuery.getQuery(Entry.class);
-        query.findInBackground(new FindCallback<Entry>() {
-            @Override
-            public void done(List<Entry> objects, ParseException e) {
-                if (e == null) {
-                    mEntriesArray.addAll(objects);
-                    mEntriesAdapter.notifyDataSetChanged();
-
-                } else {
-                    Log.d("DEBUG", "Parse Exception: " + e);
-                }
-            }
-        });
+//        ParseQuery<Entry> query = ParseQuery.getQuery(Entry.class);
+//        query.findInBackground(new FindCallback<Entry>() {
+//            @Override
+//            public void done(List<Entry> objects, ParseException e) {
+//                if (e == null) {
+//                    mEntriesArray.addAll(objects);
+//                    mEntriesAdapter.notifyDataSetChanged();
+//
+//                } else {
+//                    Log.d("DEBUG", "Parse Exception: " + e);
+//                }
+//            }
+//        });
     }
 
 }
